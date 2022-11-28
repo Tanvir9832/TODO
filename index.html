@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="icon" href="./images/todoImg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 class="main_title">
+            TODO
+        </h1>
+        <h3 class="sub_title">Create Your Todos</h3>
+        <div class="separator"></div>
+
+        <!-- !form Part start-->
+        <form id="t_form">
+            <div class="t_name">
+                <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Add Task">
+               
+            </div>
+
+            <div class="t_priority">
+                <label for="name">Priority</label>
+                    <select name="priority" id="priority">
+                        <option value="Select todo" disabled >Select todo</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+               
+            </div>
+
+            <div class="t_date">
+                <label for="date">Date (mm/dd/yyyy)</label>
+                <input type="date" name="date" id="date">
+            </div>
+
+            <div class="t_btn">
+                <input type="submit" name="submit" value="Add Todo" id="btn">
+            </div>
+        </form>
+        <!-- !form part end -->
+        <h3 class="sub_title_man">Manage Your Task </h3>
+        <div class="separator"></div>
+
+        <!-- !Add styling for management part -->
+        <div class="management">
+            <div class="m_search">
+                <label for="search">Search :</label>
+                <input type="search" name="search" placeholder="Search by task name" id="search">
+            </div>
+            <div class="m_filter">
+                <label for="filter">Filter :</label>
+                <select name="filter" id="filter">
+                    <option value="all">All</option>
+                    <option value="complete">Complete</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+            </div>
+            <div class="m_sort">
+                <label for="sort">Sort :</label>
+                <select name="sort" id="sort">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="m_date">
+                <label for="date">Find by date :</label>
+                <input type="date" name="date" id="find_date">
+            </div>
+        </div>
+
+        <!-- !table adding -->
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
